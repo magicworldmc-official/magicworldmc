@@ -8,6 +8,96 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .blog-layout {
+    display: grid;
+    gap: 24px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .blog-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: clamp(26px, 4vw, 46px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 42px rgba(0,0,0,0.18);
+  }
+
+  .blog-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 0%, rgba(212,175,55,0.12), transparent 34%),
+      radial-gradient(circle at 90% 20%, rgba(63,169,245,0.10), transparent 28%);
+    pointer-events: none;
+  }
+
+  .blog-card > * { position: relative; z-index: 1; }
+
+  .blog-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: rgba(212,175,55,0.09);
+    border: 1px solid rgba(212,175,55,0.18);
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+  }
+
+  .blog-card h2 {
+    font-family: 'Cinzel Decorative', serif;
+    color: var(--gold);
+    font-size: clamp(24px, 4vw, 38px);
+    margin-bottom: 8px;
+    text-shadow: 0 0 28px rgba(212,175,55,0.38);
+  }
+
+  .blog-author {
+    color: var(--text-dim);
+    font-size: 14px;
+    margin-bottom: 28px;
+    font-weight: 300;
+  }
+
+  .blog-content p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.9;
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+
+  .blog-content p strong {
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+  }
+
+  .blog-signoff {
+    margin-top: 30px;
+    padding: 22px;
+    border-radius: var(--radius);
+    background: rgba(212,175,55,0.06);
+    border: 1px solid rgba(212,175,55,0.16);
+    color: var(--text-dim);
+    line-height: 1.8;
+  }
+
+  .blog-signoff strong {
+    color: var(--gold);
+  }
+</style>
 </head>
 <body>
 <div class="stars-bg"></div>
@@ -33,12 +123,38 @@
 </div>
 <section class="section" style="padding-top: 0;">
 
-  <div class="cards">
-    <div class="card"><div class="card-icon">✨</div><h3>Binnenkort</h3><p>Hier verschijnen binnenkort nieuwsberichten, updates en aankondigingen over MagicWorldMC.</p></div>
-    <div class="card"><div class="card-icon">🎢</div><h3>Server updates</h3><p>Nieuwe attracties, verbeteringen en events worden hier gedeeld zodra ze klaar zijn.</p></div>
-    <div class="card"><div class="card-icon">💬</div><h3>Volg Discord</h3><p>Wil je niets missen? Join onze Discord voor de snelste updates.</p></div>
+  <div class="blog-layout">
+    <article class="blog-card">
+      <div class="blog-date">📅 Blog – 24 juni 2026</div>
+      <h2>De start van MagicWorldMC!</h2>
+      <div class="blog-author">Geschreven door: Het MagicWorldMC Team 🏰✨</div>
+
+      <div class="blog-content">
+        <p><strong>24 juni 2026</strong> is een bijzondere dag voor ons, want vandaag is MagicWorldMC officieel van start gegaan. Na een lange periode van ideeën uitwerken, plannen maken en dromen over een eigen Disney-geïnspireerde Minecraft-server, is het moment eindelijk aangebroken om dit avontuur te beginnen.</p>
+
+        <p>MagicWorldMC is ontstaan vanuit onze passie voor zowel Disney als Minecraft. Ons doel is om een unieke server te creëren waar spelers de magie van Disney kunnen beleven in een volledig nagebouwde en zorgvuldig ontworpen wereld. We willen een omgeving bouwen waarin iedereen kan ontdekken, genieten en samen herinneringen kan maken.</p>
+
+        <p>Vanaf vandaag zijn de eerste werkzaamheden officieel begonnen. Er wordt gewerkt aan de basis van de server, de eerste bouwplannen worden uitgewerkt en de fundering voor het project wordt gelegd. Hoewel er nog een lange weg te gaan is, zijn we ontzettend enthousiast over wat de toekomst zal brengen.</p>
+
+        <p>De komende periode zullen we ons richten op het opzetten van de server, het ontwerpen van verschillende gebieden, het bouwen van de eerste locaties en het uitbreiden van ons team. Iedere stap brengt ons dichter bij het uiteindelijke doel: een complete en magische Disney-ervaring binnen Minecraft.</p>
+
+        <p>Naast het bouwen willen we ook een gezellige en actieve community opbouwen. We hopen dat spelers, builders en andere enthousiaste vrijwilligers zich bij ons willen aansluiten om samen van MagicWorldMC een bijzonder project te maken. Een project als dit bouw je immers niet alleen, maar met een team dat dezelfde passie deelt.</p>
+
+        <p>We begrijpen dat het nog enige tijd zal duren voordat alles klaar is. Daarom kiezen we ervoor om kwaliteit boven snelheid te stellen. Elk gebouw, ieder pad en elk detail wordt met veel aandacht ontworpen, zodat de uiteindelijke ervaring zo magisch mogelijk wordt.</p>
+
+        <p>Vandaag markeert het begin van een bijzonder avontuur. We kijken ernaar uit om de komende maanden onze voortgang met jullie te delen via onze website, Discord en andere kanalen. Regelmatig zullen we nieuwe updates, screenshots en blogs plaatsen, zodat iedereen de ontwikkeling van MagicWorldMC kan volgen.</p>
+
+        <p>Namens het hele team willen wij iedereen bedanken voor het vertrouwen, de steun en het enthousiasme. Zonder jullie support zou dit project niet mogelijk zijn.</p>
+
+        <p>Dit is nog maar het begin van een magisch avontuur. Samen bouwen we aan de toekomst van MagicWorldMC.</p>
+      </div>
+
+      <div class="blog-signoff">
+        <strong>Datum:</strong> 24 juni 2026<br>
+        <strong>Geschreven door:</strong> Het MagicWorldMC Team 🏰✨
+      </div>
+    </article>
   </div>
-  <div style="text-align:center; margin-top: 38px;"><a href="https://discord.gg/GzgAQgMwMc" target="_blank" class="btn btn-primary">💬 Join Discord</a></div>
 
 </section>
 
